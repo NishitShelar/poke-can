@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POKECAN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="min-h-screen m-0 font-[Poppins] text-[#1E1E1E] bg-[#CDCDCD] bg-[url('images/bg2.jpg')] bg-cover bg-fixed">
+
+  <!-- HEADER -->
+  <header class="w-[min(1200px,90vw)] mx-auto flex justify-between flex-wrap pt-[50px]">
+    <div class="left">
+      <h1 class="font-[Karantina] text-[16vw] leading-[0.8em]">POKECAN</h1>
+      <img src="images/2.png" alt="" class="w-[200px] mt-5">
+    </div>
+    <div class="author text-right flex flex-col gap-2">
+      <h3 class="font-[Karantina] text-[5vw]">CSS ONLY</h3>
+      <div class="flex justify-between items-center">
+        <p>Get the images & code:</p>
+        <p class="font-medium"><a href="https://github.com/lun-dev/pokecan" class="no-underline text-inherit">github</a></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <div class="banner relative h-screen -mt-[350px] overflow-hidden">
+    <div class="product absolute left-1/2 -translate-x-1/2 bottom-[170px] z-20 w-[500px] transition-all duration-700">
+  <div class="soda" style="--url: url(images/pikachu-bg.png)"></div>
+  <div class="soda" style="--url: url(images/gengar-bg.png)"></div>
+</div>
+
+
+    <div class="rock absolute inset-0 w-full pointer-events-none">
+      <img src="images/rock1.png" alt="" class="rock-1 absolute h-[170px] left-1/2 -translate-x-1/2 bottom-[30px] transition-all duration-700 z-10">
+      <img src="images/rock2.png" alt="" class="rock-2 absolute h-1/2 left-0 bottom-0 transition-all duration-700">
+      <img src="images/rock3.png" alt="" class="rock-3 absolute h-full right-0 -bottom-[100px] -rotate-[25deg] transition-all duration-700">
+    </div>
+  </div>
+
+</body>
+</html>

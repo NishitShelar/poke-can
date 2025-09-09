@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:wght@100..900&display=swap');
+
+/* Background grid pattern */
+body {
+  background-image:
+    repeating-linear-gradient(to right, transparent 0 150px, #0001 150px 151px),
+    repeating-linear-gradient(to bottom, transparent 0 150px, #0001 150px 151px),
+    linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+    url(images/bg2.jpg);
+}
+
+/* Product soda images */
+.soda {
+  --left: 0px;
+  background:
+    var(--url) var(--left),
+    url(images/mockup.png) 0 0;
+  background-size: auto 100%;
+  width: 280px;
+  aspect-ratio: 2 / 4;
+  background-blend-mode: multiply;
+  transition: 0.8s;
+  -webkit-mask-image: url(images/mockup.png);
+  -webkit-mask-size: auto 100%;
+  mask-image: url(images/mockup.png);
+  mask-size: auto 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.soda:nth-child(2) {
+  opacity: 0;
+}
+
+/* Hover animations */
+.product:hover {
+  bottom: 300px;
+}
+.product:hover .soda:nth-child(2) {
+  opacity: 1;
+  --left: 500px;
+}
+.product:hover .soda:nth-child(1) {
+  opacity: 0;
+  --left: 500px;
+}
+
+.banner:has(.product:hover) .rock-1 {
+  transform: translateX(-50%) translateY(50px);
+}
+.banner:has(.product:hover) .rock-2 {
+  transform: translateX(-100px) translateY(100px);
+}
+.banner:has(.product:hover) .rock-3 {
+  transform: translateX(100px) translateY(100px);
+}
+
+/* Responsive */
+@media screen and (max-width: 1023px) {
+  .soda {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .soda {
+    width: 250px;
+  }
+  header img {
+    display: none;
+  }
+  header .author {
+    width: 100%;
+  }
+}
